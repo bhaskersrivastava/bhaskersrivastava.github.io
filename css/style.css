@@ -331,6 +331,15 @@ nav{
     margin: 0px;
 
 }
+.text-overlay a{
+    color: #bfbfbf;
+    border: #1a1a1a;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #c70e0e;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 .p-box:hover .text-overlay{
     display: flex;
 }
