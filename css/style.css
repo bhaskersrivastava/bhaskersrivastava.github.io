@@ -671,6 +671,13 @@ nav{
 	
 }
  
+
+@media(max-width:400px){
+	.s-box{
+		width: 100%;
+		height:400px;
+	}
+}
 @media(max-width:600px){
 	.s-box{
 		width: 100%;
@@ -731,10 +738,3 @@ nav{
         cursor: pointer;
     }
  }
-
-@media(max-width:400px){
-	.s-box{
-		width: 100%;
-		height:400px;
-	}
-}
