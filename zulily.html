@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         :root {
+            --themebg: rgb(88, 6, 126);
+            --themelight: rgb(155, 5, 168);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease-in;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        header {
+            background: var(--themebg);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 653;
+            opacity: 1;
+            padding-right: 70px;
+            overflow: hidden;
+            height: 100px;
+        }
+        
+        header>a {
+            outline: none;
+            margin: 0;
+            border: 0;
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        main .content {
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .click {
+            display: inline-block;
+            margin: 30px auto;
+            text-transform: capitalize;
+            padding: 15px 20px;
+            background: var(--themelight);
+            font-weight: 600;
+            border-radius: 3px;
+        }
+        
+        header ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        header ul li {
+            text-decoration: underline;
+            color: #fff;
+        }
+        
+        footer p {
+            color: #fff;
+            margin: 20px 0px;
+        }
+        
+        header ul a {
+            padding: .53rem;
+            color: rgb(233, 220, 235);
+            text-decoration: none;
+        }
+        
+        header ul a:hover {
+            color: #fff;
+        }
+        
+        main h1 {
+            font-style: italic;
+        }
+        
+        main p {
+            margin: 15px 0px;
+        }
+        
+        main span {
+            margin: 26px 0px
+        }
+        
+        main b {
+            margin-bottom: 20px;
+        }
+        
+        main a {
+            padding: 10px 15px;
+            color: #fff;
+            background: var(--themebg);
+            text-decoration: none;
+            margin: 20px 0;
+        }
+        
+        .gallery-container {
+            padding: 20px;
+            background: rgb(155, 5, 168);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            background: transparent;
+        }
+        
+        .gallery a {
+            background: transparent;
+        }
+        
+        .gallery div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .gallery div span {
+            color: #fff;
+            line-height: 1.1;
+            margin: 0;
+            padding: 2px 0px;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease-in;
+            cursor: pointer;
+        }
+        
+        footer {
+            background: var(--themebg);
+            padding: 15px;
+        }
+        
+        .footer-nav {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 5px;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        
+        .footer-nav li {
+            /* margin: 0px 10px; */
+            text-decoration: underline;
+        }
+        /* .footer-nav li:hover {
+                                                           text-decoration: underline;
+                                                       } */
+        
+        .footer-nav li:not(:first-child) ::before {
+            content: '|';
+            color: #fff;
+            margin-right: 10px;
+            margin-left: 2px;
+        }
+        
+        .footer-copyright {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        
+        @media screen and (max-width:600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            header {
+                padding-right: 5px;
+                height: 60px;
+            }
+            header>a>img {
+                height: 70px;
+            }
+            .footer-nav li {
+                margin: 0px 3px;
+            }
+            header li a {
+                padding: 5px;
+                font-style: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="https://link.e.zulily.com/ls/click?upn=MqBe-2FWivc-2FNj3WDv7LFqZ3SxXK-2F5UmmnRWLz-2B-2BKcMpzuAXhqfXOczXxBFwoVVwOWIL-2FHA-2FM6WzYR2aOLTpYUA-2BqR-2BbRc-2BLFCDbfjo1dwytjpPnPuyfFP7wUf3uilxeXxE6eVo1uMLavdlX1-2F9LEG9w-3D-3DiHAo_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIvSqNUbThNPrcfgnTjFzMZEP3OTlA73dFkmAxv8iyGniJyZperuzum4SA8s9QoOmN7-2BAsRNAUeOI1GxMQmmjNIzqrJCe9jYAcpTiXRNEym0cfF-2F92EW8gof7Vv2bWkzkM9rUQhdTZokBHWQmjLB5hiv4RVTcS3x2K1wnSuwUAyiLlsZy6s4KYEFJL9RIBXDiqe4RMck0gTCcETHNJrjSO9QDFyns4M5m-2FT4aCdfA8cWErijMvnbktXwr-2Bawzthbta"
+            target="_blank"><img src="https://cfcdn-skin.zulily.com/media/email/triggers/Templates/190108_head_l3.png" alt="Zulily"></a>
+        <ul>
+            <li><a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13nBFCuKmNgdnStfmbGbTnhoxml-2FjAmR9f5hM84qMSHwrtRnLMD8-2FoWHMkSSp5KBTCmoiDpE-2FRNkHXNjTZBOL0iSJwsuDfrBOZUs-2FgYpHPkCoQQdJDkUOvW5qRQgjLZ-2FvnVl4IJ4IQl8Eq3FJBrYgcf0-3D2Ka__YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FI-2Fpxr5GuPQ-2B5FkUT7Gi-2Fy8hA4InscToSDUFlXZ-2Bfs6fNecxG6AE5DnAyqdWE-2BLbzPpG14yv7d0jjXU4XxOB8TBHOcvHepisdAFznjZqnmJCq3gV8nkqbQ-2BWXpwtuWpC4IKE6UgF9IlWIZV1yvKw-2FDMVRS344p9BcRSW-2FpD2T7Murae-2BiKFdxOOmvf9YyxB29sz76AQ2N1qcqdTvZn7JaZ7cZZVCgqMFiH2bicpTBfAlzlgnm-2Bi3I45G23PQqJxHM0"
+                    target="_blank">NEW TODAY</a></li>
+            <li>
+                <a href=""></a>|</li>
+            <li><a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13nBFCuKmNgdnStfmbGbTnhofqgmeJLWwJ5chD5ZNKd90GSElmqPsgGvG9KF6uGUPX9ajFPmtYFd-2F8jMT6o9VJ3HKou1vY-2ByiyZGY3BxVUjipRmFZGInPzschYCS3QIbVU1c9MYbVKHEblgJ7FS9agAA-3DVlgD_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIJEhW6MoCXrH0Rnk4O-2BHXmGoAwMnII4QSqY9pJi-2BWnIq6oym6wFlAJ2lsNrx4ybiCRwS0bc3-2FN84029klny47LBgAN41ilSfnnH7hFfni1iH99JZCTqI4lSwhd1METnH7L5kHE-2BPUy0tj2se-2BgTgkI1bCtbODbAte5wkVut6CwzU-2FeNtcLbIg2b7i5RPsg2gOQfo9ksl3RGkL3fmblptzcEOdmoCnwzPJjWMN4qhugKmOrQFX1SeIpmUZi8WJzOy9"
+                    target="_blank">ENDS SOON</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="content">
+            <h1>Hello!</h1>
+            <p>At Zulily, we're passionate about creating a fabulous shopping experience. Here's how you can help make Zulily better – and get rewarded in the process.
+            </p>
+            <p>An independent market research company has developed this survey so that we can learn more about how our customers shop.
+            </p>
+            <p>If you'd like to participate, please click the button below. In the interest of privacy and security, your responses will remain anonymous. The survey should take about 15 minutes. Upon completion, you'll receive $10 off your next Zulily order*.
+                We have a limited number of spots available. Once we’ve reached the limit, we’ll discontinue the survey.</p>
+
+            <a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13iKxoQcoEORdpMIpQmowSzW6n4xkDQWk8KMpokZmKUXIJ-2FoCzTAtYBaOXU58lSxqJpM97QMMsOSOImeY-2Fm5bA1mU005BEI6QVIybsL0DjIltUM___YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIkrchLy3TXlWjL19lQTlOf-2Fnp4Ov0aOat-2Bcj5KXfDjOOjVTPeWUbw7JAvh2Cf22147FkjT53jxJ8zqBZx9U16ivAuWs7iLRwosF7DUDR0xZ1Ro8V017OrzPcZTQlZR73OmpZkW7ssy2Nnoiy-2Bcm1J3SlnhO99Gd-2B7PGWkaPFhxSNWef90lXotoioKtYfn5z1DfoW87U9vr9m3Ly1VIbUhfL3StdXusxtoGAA0GoWjdl-2FFGmu2tiQoR2sabkj82wDB"
+                target="_blank" class="click" title="">Click to get started</a>
+
+            <p>Please complete this survey no later than April 27, 2021 11:59 p.m. PST. Thank you for your time.</p>
+
+            <span>Enjoy!</span>
+            <b>– Your friends at Zulily</b>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery">
+                <div>
+                    <a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13nBFCuKmNgdnStfmbGbTnhroOI7GaLh1BBp4-2BgW2ZfCMqRHCQq9-2BJTJ-2BNq36-2BwFzW6Zyz4bJf6NozPbdG3EzWJfIouiXCcqL97shK5dNI-2BFmZKbBYNM18VtyMZF8y39sypry2lsPWnXQBJUFJh0PPp-2B4OQG0aOPzyqHuNLT2gbtXktOP_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIBe-2BFbS5Tst417DyyodWLarDmPf-2B8LU1zLTzYBGfYqtyUNIpYLErODRuTDTIzTo6mzRLOaDuIF7U6n7SWcJhez1erxHcvcE2S-2BGqnLeTl5Q1Hvn1ozhTMlo8hXdbNaKdF5adJ5ijBD9u8dRXYCzd1s1-2BFf12-2FnzKrTt-2FXt3Hj3dRfSdNyn0mKGMk9BByYjVzm1rm632A9qktCRfr2TXCJvvHvkpSSovfLF0j2r1whvlpsk5B7E46YvXc4BIEyBYAl"
+                        target="_blank"><img src="https://cfcdn-skin.Zulily.com/media/email/triggers/Templates/190108_head_cat1.jpg" alt="Women" /></a><span>Women</span></div>
+                <div>
+                    <a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13nBFCuKmNgdnStfmbGbTnhpRAvsEP18jRCedgCr0o6nVnws58A4pUuop8QZeVO3zdMFz1o4BnMfw3mv1ihaPCZfoHd5asR-2FI8ryRrE5kVXoYgDFjPozbMavgkqYvYcC1wd-2F3rIgKprFK1EF4OKL0l2rMQbY7x1S8uSoY2damhL1HniWH_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIKa3O5i71y0qocoZpdz60OtwLr65qVHjtMouwaqUFAOPIE2mq3JcDmdZQS1TZykyWJTdrrtAsDxsJNa1TxUpfvqcaGvUApqiC92cvB0FpHI-2FhO6OiDFWKKpWDEjTfQq-2Bws4vL8cD9voXPz9QyC2CKY1th8rNGsb1HQWQL8VJ6ObInh6asV7H60JuhWIiVSoTN9VNms3sCSJyW-2Bv2GcyTgHtQzPM7ynfrpZNiAYYl9zNp0CV-2FTkLxMfXx9fjMd8OK-2F"
+                        target="_blank"><img src="https://cfcdn-skin.Zulily.com/media/email/triggers/Templates/190108_head_cat2.jpg" alt="Shoes" /></a><span>Shoes</span></div>
+                <div>
+                    <a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13nBFCuKmNgdnStfmbGbTnhrenvqT4LFgslEjHnTbOBmMZ5rKiKsmWIKUwuQKpO88NYtsnbQtb61VI2ECI2E0NJBgRtnf04zU0aqh7lOXp4oX13aZdmTI3y9QEgXH99eRMzRHNKYPhZrRkVXV7s3yDz3IwgCQr9-2F4QosEMfhxw1IlO7Hc_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIn4jbNbuMQCtAUzo97GBTk2njlYdqhzCd64spADbneqjeN-2BGBb2tKSn5DqIBhg0eQt94JoC6aeFToM-2FuLGdElHAM8PMnQ5lY8wblRgN2YvzjMTVSdtchQ9-2FcHouzh5RZ2hmggJIQnxh9NIkl5x-2FPVxYPrHcZWZD3fqt1YbtAgzy3iTHAlPpCjtQvV5N-2FP5u-2BhenYUpOzv57LfhYIRgIcIo5DRGi6H-2FE9rljkzBoxmELy3j8gyAnMissrOZ7KYELd3"
+                        target="_blank"> <img src="https://cfcdn-skin.Zulily.com/media/email/triggers/Templates/190108_head_cat3.jpg" alt="Kids" /></a><span>Kids</span>
+                </div>
+                <div>
+                    <a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13nBFCuKmNgdnStfmbGbTnhqsdsaaTUepfQePOz4Jam6sPk-2FUPHF6zTIUYMVVJUqV3epjwc5dPQ-2BpyXvt27w0IP8fB-2F2f5UrZj-2FH1q7Nh6yrvUtQugANT7wCOjQX7lW8-2BIhxKnLaEMSQwNvjQiSIvG8oSjUA50n4yve9ZKX5GgwnL_HZo_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIKuVy44A1vUX-2F7GZE8w3FF1YfTebmvBTGbHxx4G1265WAgGxJcqHH5sRtw3dq9NFHOY01kNqCbWHjzXTlLswp9ukWLoLIgT6pi5-2Fq9Qpp7iDf47tVLCCTXrK5cgiGFgK-2BeIbaRmMYSvRCQOFqlM2dOpBC8JPDi5-2Bc3ry2gEbWEYEToQ8HJtE539AH83PgiQ1eJcwnUvHf4c5hdpIhGZGpBsSQNhjZoQHHYc0zMM09VC-2BN-2FN7zAya1LZvfclcSb7P4"
+                        target="_blank"><img src="https://cfcdn-skin.Zulily.com/media/email/triggers/Templates/190108_head_cat4.jpg" alt="Home" /></a><span>Home</span></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-copyright">
+            <small>&copy; 2020 Zulily.LLC</small>
+            <address>2601 Elliott Avenue, Suite 200<br>
+                Seattle, WA 98121
+            </address>
+            <a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13nBFCuKmNgdnStfmbGbTnhoxml-2FjAmR9f5hM84qMSHwrtRnLMD8-2FoWHMkSSp5KBTCmoiDpE-2FRNkHXNjTZBOL0iR8xrrXy-2Br2tlov-2FkRL3GfilieZak-2Bmib-2FQj7KWRCyY0VnDTZWR8qcK1x66TQM-2FEUo-3DuJJu_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FI9iRTslAEOB-2FfIP4eH3plVgfo2gfEIwVnFV7dY8ujaT3M0YkjuUvyiZgyqC8G4miQhOPi2vjuyRpwobCMelJ4fQil2Vt1GGYcncvF3yEt0t8Wo9UmgYoKz3cowUBw7xfaJOK2J4hn5bD6bEOHByvKQdMI8boxy99-2BbBRHZLmL50zbbDE9GdXYdex766CTKBhHBG5O4s-2FM28TVN-2Bqvvy-2BQunN6l2OaapH-2Bs9txd9TyAOpkwPq-2FL5jo4ImxpFR3qmm6"
+                target="_blank">www.zulily.com</a>
+        </div>
+        <p>Upcoming events and start dates are subject to change. To unsubscribe or to manage your email preferences, please <a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13nBFCuKmNgdnStfmbGbTnhr-2BW8rHmWFTlV68RuE9pWtNvHi4QXmzioZ6AsJLwYLzDedj8A3XgB3YF4uezyOkXORIae6NLvDdJg0Iyiowwu2YcVLpyP9CJueaZHLnUxtmRfJwplZt3atYMacUGFyuUPvgFcc6Sbg-2FjiQ-2F1d23N0JQAy3vO8dBKlvv2NIn5QlmpvYOzf62nUhjK2BlSDJKvYqkUu9oURHB2vRLmTeELXMYVI-y_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FI-2FztcJaSKaV85bEzRbX2lthnkgzTcf6PUW0DhhVT-2BaXSYLWdxqiVEzbn2aG-2BP7gWKCUxgBuXGcqjiibN7JyDGIrtVwfPRKnA5-2BILZzNbSGkCb-2Bd7sBntZsQtFtOJ0hgn-2BhNA-2Fh9P5KwKNTBbT04qlOrV3a-2Bj7UpV6xmEX2S5No-2B4bTD-2FhBf6WelttfBFyO4SLwCoimB987KdhXZtcN1bcDQJ-2FoRTW3UcsG7Jx6RdXtwXdthz5g4V1KJbV4iZ7k3Oj"
+                target="_blank"><span style="font-weight:normal; color: #fff; text-decoration: underline;">click here</span> . Please note that we may still send you messages related to your purchases or inquiries.</a></p>
+        <p>If you have any comments or questions, please use the following links instead of replying to this email:</p>
+
+        <ul class="footer-nav">
+            <li><a href="https://link.e.zulily.com/ls/click?upn=YGrIHE2m8f3tdBKVUcf13sePj3GzRSWnh4Wbea5Wmrf0IvyoNrcw9BU6Tw-2F9BG4CaxrO4f-2BJ-2Bw1SxCPoeVavP-2BpeW-2FSaKdE3pvVuvBdRPUjEbdQwp4j7ldeo03KmJnHePqIcc0sMEc8HpQuHPOK6ue-2FSS8qeHa-2FcuFt1NRoD8GM50DiafBSQBHV4pW8ZFe-2B9f06c_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIaTSQCB0BhMYEC51pNG9039QBsXjVUNUbA-2Fz6tF1goOfIHRWgnXCxEb2vHz4Ux52U4KwKHi3mZncVC7OCPXT2p67OmniwCv5GoXIYfPyGHS-2F4vdR4LltJWF930nyE2S99DK96ebcOS3X1X1WAoxBOWnkjicrvR9Y-2FaAXuZoSeZ7zWrWWwOg1uMIk4s56zxNpvsjJwpvh4YI9VHthtZ5w9aXxKsmE5bc1-2FlfgoefoIZf83UaHLEEWRVbNuBwAatnUj"
+                    target="_blank">Help Center</a></li>
+            <li><a href="https://link.e.zulily.com/ls/click?upn=MqBe-2FWivc-2FNj3WDv7LFqZ8Lst53PkbeppKnyp1cD1P5xYh4NaYbpk3zRFzEYqnlmxzLQpGaXrK3w0aum4JIm3rB8Mj4IiY9Nda0taIfEDF7JzO5xgx2V5DQY-2BEGpnGNfRlSDPkOLlCVygn2iSQ6OmkwY1btZ-2FjVHJX7pRIVhUhMIasHkFItwTSIaa2VcQlXw11pa_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FIdP-2FfISVIi54WdSv0Yu7FIEKuyJY2PDy1bUE-2BHNv0RAekoGdFZTnhyaffmLeRIrqDYC8z21yGF1Q2XeFboEXYn43MWXi7-2FjlFq3uEy7hVK0wxtGXrgJbJSHkDify7qr-2BqEbsQC-2BvMgEmIY7gn3SwTt-2FKQIXkasLJWL2Qs3t-2FT4zSzPHtNyXpB2LxrR1ky2jKy3fP-2BAJ90ZpNDuhnLUaX9-2FWI55wudz9KoYI4JsaJExTJSyJfufE8SsDndN5PRxCla"
+                    target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://link.e.zulily.com/ls/click?upn=MqBe-2FWivc-2FNj3WDv7LFqZ3EX0CHRgT0mDW7igwN74-2FBlj8at9Fe0NJ56FWfS46cQINpU2mw47osATgDzx3iAiTbY6MxHR6321Kf0nnKoZ-2BIL0Su4U4CV43Y6yz8Rh5-2BoWJN9cO9HGyC-2FpDC1m10XD8UojsgYqFeBNXD64Krlrl5qcB-2BGdvHT66DPrRPbIeRJr--6_YIvs-2BsafIilcmSv9tTOSH4dcuBBElG1BWsu04dIRs3u-2BRwMlBu-2FrOwGfwOxb-2FY7vPNzxF97EKlSBiOVaXM-2BVoeWH6kawwjG7MkH4UetUaib9DyxfxNCn8t-2Fisj2rwwRwjnsveOCKBHGegnJ2TYl5j3AxPtzcKzyxqjwggQL-2BBR-2B9BmxULxx86fqKhnbSanRCrRDYDv2hAqbevO4gl7ammcBeFgHlmh1-2BjRExi3FOa3RO9l74A1zAPOf1yVHh3rD65oNVMTkQGjDmnq-2BSZ1Fk-2BDOnCgCRE2uUZ7jM28cYrqvze4OXGGPYCQavrEIBNSbvhb9QzvYjn-2FIOa2vbF7JzIsNe-2B3C0iKxmANnstMUM-2BdAYNfWexj27NZTCiDCYtHKz-2F-2FqK7olvtCi7LsVH4xoTNnEszNsG6M2eqSHn5dv9xoMEJzEWLVykAxjmjH0SZY-2FI0d4JQgTKbnYxCmqHp51zH2hJ4mW70KGGXoMhJyyXCkweDjcE6DPKa5VJ3ShhfDIdfc9ziDKBcg1U3D02yD-2BdmbFq4bbKQH7USstHQlP9kJ54MEuj1234cVbH1BYpfE14L4rNGn2X5-2FkF7J4tDVDyENhFM-2BJNhqRJSc4DgQ8dKWzvTcLvMGTK9BpP-2FwHxbCQpjw7OIH2KaaISYvIUWz183e89rE1vwEjuU5xICvH-2FPZL-2BEhr4R-2FEd-2FUB6nvhQ9dWe"
+                    target="_blank">Privacy Practices</a></li>
+        </ul>
+
+        <span style="font-weight: bold; color: #fff;">*Get $10 off your order</span>
+        <p> Once you complete the survey and click the provided link to activate your offer, you will automatically receive $10 off your next order. $10 minimum order required, not including taxes and shipping & handling. The $10 discount will be applied
+            in your shopping basket to your next order, before tax and shipping charges. This offer is available only on items shipped to US addresses. Offer not valid on prior purchases. This offer does not apply to the purchase of gift cards, coupons
+            or vouchers. Offer expires on April 30, 2021, at 11:59pm PST. Limited quantities available. Offer may be changed at Zulily’s discretion at any time. This offer is not valid if transferred or shared. Zulily membership is required to shop on
+            zulily.com. From time to time, Zulily may run promotional offers. Selection for inclusion into a promotional offer is in Zulily's sole discretion. The nature of any promotional offer, including but not limited to the amount and length of the
+            offer, is also in Zulily's sole discretion. Promotion is subject to Zulily's Terms and Conditions, found
+            <a href="https://www.zulily.com/terms-conditions" target="_blank"><span style="font-weight:normal; color:#fff; text-decoration: underline">here.</span></a>
+        </p>
+
+    </footer>
+</body>
+
+</html>
